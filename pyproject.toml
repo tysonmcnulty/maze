@@ -1,0 +1,30 @@
+[tool.isort]
+profile = "black"
+
+[tool.poetry]
+name = "maze"
+version = "0.1.0"
+description = "Maze code kata"
+authors = ["Tyson McNulty <mcnultyt@vmware.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[tool.poetry.group.test.dependencies]
+pytest = "^7.2.0"
+black = "^22.12.0"
+isort = "^5.11.4"
+
+
+[tool.pytest.ini_options]
+addopts = "-rs"
+testpaths = [
+    "group_*/test",
+]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
