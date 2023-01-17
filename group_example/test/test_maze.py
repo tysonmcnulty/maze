@@ -14,10 +14,14 @@ class MazeTests(unittest.TestCase):
     def test_load(self):
         self.assertEqual(101, len(self.maze))
         self.assertTrue(all(map(lambda row: len(row) == 102, self.maze)))
-        self.assertTrue(all(map(lambda char: re.match(r"[SE.#\n]", char) is not None, chain.from_iterable(self.maze))))
+        self.assertTrue(
+            all(
+                map(
+                    lambda char: re.match(r"[SE.#\n]", char) is not None,
+                    chain.from_iterable(self.maze),
+                )
+            )
+        )
 
     def test_parse_small_maze(self):
-        self.assertEqual(
-            None,
-            parse(["#S.E#"])
-        )
+        self.assertEqual(None, parse(["#S.E#"]))
