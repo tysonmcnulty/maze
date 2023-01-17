@@ -1,0 +1,10 @@
+A maze has many, many locations
+A wall is a kind of location
+A corridor is a kind of location
+
+A location is associated with a maze
+A location has coordinates
+Coordinates have an "x" value and a "y" value
+A coordinate value is just a number
+
+A corridor evidently has many neighbors, which are just corridors
